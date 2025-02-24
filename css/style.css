@@ -1,0 +1,279 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+  font-family: 'kopubworld-light';
+  src: url('../fonts/KoPubWorld\ Dotum_Pro\ Light.otf') format('truetype');
+}
+@font-face {
+  font-family: 'aritado-thin';
+  src: url('../fonts/AritaDotumKR-Thin.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'aritado';
+  src: url('../fonts/AritaDotumKR-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'aritado-m';
+  src: url('../fonts/AritaDotumKR-Medium.ttf') format('truetype');
+}
+
+/* reset */
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none; color:inherit;}
+body {overflow-x: hidden; font-family: 'kopubworld-light', sans-serif; }
+
+
+/* -----------------wrap----------------- */
+.wrap {display: flex;}
+
+/* fade in, fade out */
+body {animation : fadein 2000ms ease-out;}
+@keyframes fadein {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* -----------------header----------------- */
+header {
+  display: flex; flex-direction: column; justify-content: space-between;
+  position: fixed;
+  top: 0; left: 0;
+  width: 310px; height: 100%;
+  background: url('../img/pattern1.jpg') no-repeat left/cover;
+}
+
+/* header(제목) */
+header .header {
+  width: 300px; height: 60%;
+  padding: 100px 0 0 40px; box-sizing: border-box;
+  color: #fff; 
+}
+header h1 {
+  font: bold 35px 'aritado-m', sans-serif; 
+  letter-spacing: 7px;
+}
+header h2 {
+  font: lighter 27px "Poppins";
+  margin: -7px 0 20px;
+  letter-spacing: 2px;
+}
+header p {font: normal 16px "Poppins"; font-style: italic;}
+
+/* header(header-bottom) */
+header .header-bottom {
+  display: flex; flex-direction: column; 
+  margin: 0 0 50px 40px;
+}
+header .sns {
+  display: flex; justify-content: left;
+}
+header .sns i {
+  font-size: 30px;
+  margin: 0 20px 30px 0;
+  color: #fff;
+}
+header .sns i:hover{color:#D1BB9E}
+header .header-bottom ul {
+  color: #fff;
+}
+
+header ul>li {
+  font: lighter 16px "aritado-thin";
+  margin-bottom: 5px;
+}
+header ul>li>i {
+  display: block; 
+  width: 5px; height: 5px; 
+  margin-right: 20px;
+}
+
+/* -----------------main----------------- */
+main {
+ display: flex; flex-direction: column;
+ padding: 10px 20px 20px;
+ box-sizing: border-box;
+ background: #e9ddcb;
+ width: 100%; 
+}
+
+/* menu */
+main ul {
+  display: flex; justify-content: right; margin: 25px 0 10px;
+  font-family: "Poppins", serif;
+}
+main ul li a {margin-right: 40px; padding: 10px;}
+main ul li:hover a {color: #fff; }
+
+/* top */
+.fix-top {
+  position: fixed; z-index: 10; bottom: 0; right: 0; margin:30px;
+}
+.btn-top {
+  display: block; 
+  background: #000; opacity: 0.7;
+  padding: 15px; border-radius: 50%; border: 0;
+  color: #fff; text-align: center; line-height: 10px;
+  font-family: "Poppins", serif;
+  cursor: pointer;
+}
+
+/* -------------main(section)-------------- */
+main section { 
+  position: relative;
+  margin-left: 340px; margin-top: 30px; margin-right: 40px;}
+main section::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+/* main (current) */
+main section .current {
+  position: relative; 
+  width: 100%; padding: 20px 30px; box-sizing: border-box;
+  margin-bottom: 30px;
+  display: flex; justify-content: space-between;
+  background-color: rgba(255,255,255,0.5); border-radius: 10px;
+  font: 600 20px 'aritado-m', sans-serif; 
+}
+main section .current:hover {
+  background-color: #A79277;
+}
+main section .current span:nth-child(2) {
+  font-weight: lighter;
+}
+
+main section .articles {
+  position: relative;
+  width: 100%; 
+  padding-top: 200px;
+}
+main section .articles article {
+  float: left;
+  width: 33%;
+  padding: 16px; 
+  box-sizing: border-box;
+}
+main section article>div {
+  width: 100%;
+  padding: 18px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 5px 5px 10px rgba(0,0,0,.4);
+}
+main section article>div .img_frame {overflow: hidden;}
+main section article div img {width: 100%; transition: .6s;}
+main section article div img:hover {transform: scale(1.2);}
+main section article div h2 {
+  font: bold 20px 'aritado-m', sans-serif;
+  margin: 10px 10px 3px; letter-spacing: 3px; 
+  /* text-align: center; */
+}
+main section article div .exhDate {
+  font: normal 16px 'aritado', sans-serif; margin: 0 10px 30px;
+  /* text-align: center; */
+}
+main section article div p {
+  font-size: 15px; margin-bottom: 30px;
+}
+
+/* -----------------main(footer)---------------- */
+footer {
+  width: 120%; font-size: 14px; text-align: center; line-height: 14px;
+  border-top: 1px solid #795757; padding: 10px; margin-top: 100px;
+}
+
+/* ------------------반응형---------------- */
+
+/* 브라우저 폭 : 1600px 미만  */
+@media screen and (max-width:1599px){
+  main section .articles article {width: 33%;}
+
+}
+
+/* 브라우저 폭 : 1200px 미만  */
+@media screen and (max-width:1199px) {
+  header {width: 250px;}
+  header h1 {font-size: 30px;}
+  header h2 {
+    font-size: 20px;
+    margin: -20px 0 20px;
+  }
+  main section { margin-left: 250px;}
+  header ul>li {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  header h1 {transform: translateY(-50%); font: bold 30px 'aritado-m';}
+  main section article {width: 50%; padding: 20px;}
+  main section .articles article {width: 50%;}
+}
+
+/* 브라우저 폭 : 900px 미만  */
+@media screen and (max-width:899px){
+  .wrap {display: flex; flex-direction: column; }
+  header {position: relative; width: 100%; height: 80px;}
+  header h1 {
+    position: absolute; top: 40px;
+    font: bold 30px 'aritado-m';
+  }
+  header h2 {
+   display: none;
+  }
+  header p {
+    position: absolute; top: 55px; 
+    font: lighter 15px "Poppins";}
+  header ul {
+    position: absolute; top: 15px; 
+    width: 100%; height: 30px; left: 72%;
+  }
+  header .sns {
+    display: flex; justify-content: left;
+  }
+  header .sns i {
+    padding: 10px;
+    margin: 0 20px 30px 0;
+  }
+  main ul li a {
+    position: relative; padding: 20px;}
+  main section {margin-left: 40px;}
+  main section .articles article {width: 50%;}
+}
+
+/* 브라우저 폭 : 800px 미만  */
+@media screen and (max-width:800px){
+  main section .articles article {width: 100%;}
+}
+
+/* 브라우저 폭 : 700px 미만  */
+@media screen and (max-width:700px) {
+  header ul {left: 65%;}
+  header h2 {display: none;}
+  header .sns {
+    display: flex; justify-content: left;
+    position: absolute; top: 150px; left: 20px;
+  }
+  header .sns i {
+    padding: 10px;
+    margin: 0 5px;
+  }
+  main section .current {font-size: 18px; padding: 10px 20px;}
+  main section .articles article {width: 100%;}
+}
+
+/* 브라우저 폭 : 650px 미만  */
+@media screen and (max-width:650px) {
+  header ul {display: none;}
+  main ul li a {
+    position: relative;  left: 40px;}
+  header .sns {
+    display: flex; justify-content: right;
+    position: absolute; top: 20px; right: 10px;
+  }
+  header .sns i {
+    padding: 5px;
+  }
+  
+}
